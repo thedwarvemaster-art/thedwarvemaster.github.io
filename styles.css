@@ -1,0 +1,276 @@
+@font-face {
+  font-family: "JH_FALLOUT";
+  src: url("JH_FALLOUT.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT0807M";
+  src: url("TT0807M_.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Overseer";
+  src: url("Overseer.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  color: #fff4d9;
+  background: #201e1a;
+  font-family: "TT0807M", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  flex-direction: column;
+  margin: 0;
+  isolation: isolate;
+  background: #28251f url("background_home.jpg") center / cover no-repeat fixed;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(16 15 13 / 34%), rgb(16 15 13 / 12%) 55%, rgb(16 15 13 / 48%));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #fff4d9;
+  outline-offset: 4px;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(100% - 3rem, 1200px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-inline: auto;
+  padding-block: 1rem;
+}
+
+.site-logo img {
+  display: block;
+  width: clamp(13rem, 24vw, 21rem);
+  height: auto;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+}
+
+.site-nav a,
+.site-footer a {
+  color: #ffb641;
+  font-family: "Overseer", sans-serif;
+  font-size: clamp(1rem, 1.7vw, 1.4rem);
+  text-shadow: 0 2px 8px #000;
+  transition: color 180ms ease;
+}
+
+.site-nav a:hover,
+.site-footer a:hover {
+  color: #ffe0a3;
+}
+
+.home-layout {
+  display: grid;
+  width: min(100% - 3rem, 1200px);
+  flex: 1;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 23rem);
+  align-items: center;
+  gap: clamp(2rem, 8vw, 8rem);
+  margin: 0 auto;
+  padding-block: 2rem 5rem;
+}
+
+.home-copy {
+  max-width: 38rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgb(255 244 217 / 40%);
+  background: linear-gradient(135deg, rgb(26 24 21 / 82%), rgb(26 24 21 / 36%));
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 36%);
+}
+
+.home-copy .eyebrow {
+  margin: 0 0 0.6rem;
+  color: #ffbf59;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-copy h1 {
+  margin: 0 0 1rem;
+  font-family: "Overseer", sans-serif;
+  font-size: clamp(3.2rem, 8vw, 6.5rem);
+  font-weight: normal;
+  line-height: 0.95;
+  text-shadow: 0 3px 14px #000;
+}
+
+.home-copy > p:last-child {
+  max-width: 35rem;
+  margin: 0;
+  color: #fff4d9;
+  font-family: "JH_FALLOUT", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: normal;
+  line-height: 1.7;
+  text-shadow: 0 2px 8px #000;
+}
+
+.fallout-menu {
+  display: grid;
+  gap: 0.55rem;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 2px solid #77736a;
+  background:
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 3%) 0 1px, transparent 1px 4px),
+    linear-gradient(135deg, #77756f, #393936 18%, #686762 48%, #302f2d 78%, #74716a);
+  box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 65%), inset 0 0 1.2rem rgb(0 0 0 / 50%), 0 0 0 1px rgb(241 230 207 / 35%);
+}
+
+.fallout-menu::before {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgb(255 244 217 / 35%);
+  color: #e3dcca;
+  content: "MAIN MENU";
+  font-family: "Overseer", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-shadow: 0 1px 3px #000;
+}
+
+.fallout-menu a {
+  position: relative;
+  display: grid;
+  min-height: 3.5rem;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.55rem 1rem;
+  border: 2px solid #aaa69c;
+  background:
+    radial-gradient(circle, #cfc9b8 0 1.5px, #514e48 2px 3px, transparent 3.5px) 7px 7px / 10px 10px no-repeat,
+    radial-gradient(circle, #cfc9b8 0 1.5px, #514e48 2px 3px, transparent 3.5px) calc(100% - 7px) 7px / 10px 10px no-repeat,
+    radial-gradient(circle, #cfc9b8 0 1.5px, #514e48 2px 3px, transparent 3.5px) 7px calc(100% - 7px) / 10px 10px no-repeat,
+    radial-gradient(circle, #cfc9b8 0 1.5px, #514e48 2px 3px, transparent 3.5px) calc(100% - 7px) calc(100% - 7px) / 10px 10px no-repeat,
+    linear-gradient(180deg, #77756f, #44433f 24%, #302f2d 76%, #66635d);
+  box-shadow: inset 0 1px rgb(255 255 255 / 25%), inset 0 -2px rgb(0 0 0 / 45%), 0 3px 5px rgb(0 0 0 / 45%);
+  color: #eee4d0;
+  font-family: "Overseer", sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-shadow: 0 2px 4px #171613;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.fallout-menu a::before {
+  width: 1.55rem;
+  aspect-ratio: 1;
+  justify-self: center;
+  border: 2px solid #e07a65;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #ff9981 0 8%, #da3f30 30%, #9e211d 72%, #591511 100%);
+  box-shadow: inset 0 1px 2px rgb(255 255 255 / 55%), 0 0 0 2px #342f2b, 0 2px 4px #171411;
+  content: "";
+}
+
+.fallout-menu a:hover::before {
+  background: radial-gradient(circle at 34% 28%, #ffb194 0 8%, #f3533f 30%, #b62922 72%, #6f1b16 100%);
+}
+
+.fallout-menu a:hover {
+  transform: translateX(3px);
+  background-color: #5f5c56;
+}
+
+.site-footer {
+  padding: 1.25rem;
+  border-top: 1px solid rgb(255 182 65 / 35%);
+  background: rgb(20 19 16 / 68%);
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .site-header {
+    width: min(100% - 2rem, 1200px);
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .site-logo img {
+    width: clamp(13rem, 55vw, 18rem);
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .home-layout {
+    width: min(100% - 2rem, 38rem);
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-block: 2rem;
+  }
+
+  .home-copy {
+    padding: 1.5rem;
+  }
+
+  .fallout-menu {
+    width: min(100%, 25rem);
+    justify-self: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

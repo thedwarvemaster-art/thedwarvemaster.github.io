@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "JH_FALLOUT";
+  src: url("JH_FALLOUT.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT0807M";
+  src: url("TT0807M_.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Overseer";
+  src: url("Overseer.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  color: #fff4d9;
+  background: #201e1a;
+  font-family: "TT0807M", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(180deg, rgb(25 22 17 / 35%), #201e1a 58rem),
+    #201e1a url("faction_background.webp") center top / cover fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ffe0a3;
+  outline-offset: 4px;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(100% - 3rem, 1200px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-inline: auto;
+  padding-block: 1rem;
+}
+
+.site-logo img {
+  display: block;
+  width: clamp(9rem, 18vw, 15rem);
+  height: auto;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+}
+
+.site-nav a,
+.site-footer a {
+  color: #ffb641;
+  font-family: "Overseer", sans-serif;
+  font-size: clamp(1rem, 1.7vw, 1.4rem);
+  text-shadow: 0 2px 8px #000;
+  transition: color 180ms ease;
+}
+
+.site-nav a:hover,
+.site-footer a:hover {
+  color: #ffe0a3;
+}
+
+.factions-content {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+  padding-bottom: 3rem;
+}
+
+.factions-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(15rem, 35vw, 27rem);
+  align-items: end;
+  overflow: hidden;
+  margin-bottom: clamp(3rem, 8vw, 6rem);
+  border: 1px solid rgb(255 244 217 / 36%);
+  background: #413a2e;
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 35%);
+}
+
+.background-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgb(28 25 20 / 35%), rgb(28 25 20 / 75%)),
+    repeating-linear-gradient(135deg, #75664e 0 2px, #514838 2px 4px);
+  color: rgb(255 244 217 / 80%);
+  font-family: "TT0807M", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-shadow: 0 2px 8px #000;
+}
+
+.background-placeholder span {
+  padding: 0.8rem 1.2rem;
+  border: 1px dashed rgb(255 244 217 / 65%);
+  background: rgb(32 30 26 / 48%);
+}
+
+.hero-copy {
+  position: relative;
+  width: min(100%, 48rem);
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  background: linear-gradient(90deg, rgb(20 18 15 / 88%), transparent);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #ffbf59;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Overseer", sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  text-shadow: 0 3px 12px #000;
+}
+
+.hero-copy > p:last-child {
+  max-width: 36rem;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.faction-group {
+  margin-bottom: clamp(3rem, 7vw, 5rem);
+  scroll-margin-top: 2rem;
+}
+
+.group-heading {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgb(255 182 65 / 55%);
+}
+
+.group-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.faction-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.faction-card {
+  display: grid;
+  min-height: 11rem;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid rgb(255 244 217 / 30%);
+  background: linear-gradient(135deg, rgb(61 54 42 / 94%), rgb(31 29 25 / 94%));
+  box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 25%);
+}
+
+.faction-logo-placeholder {
+  display: grid;
+  width: 7rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px dashed rgb(255 182 65 / 70%);
+  background:
+    radial-gradient(circle, rgb(255 182 65 / 12%), transparent 68%),
+    rgb(20 19 16 / 55%);
+  color: #ffbf59;
+  font-family: "Overseer", sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.faction-details h3 {
+  margin-bottom: 0.5rem;
+  color: #ffcf7a;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+.faction-details p {
+  margin-bottom: 0;
+  color: #e1d7c1;
+  font-family: "JH_FALLOUT", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.site-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgb(255 182 65 / 35%);
+  text-align: center;
+}
+
+.info-content {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+  padding-bottom: 3rem;
+}
+
+.info-hero {
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+}
+
+.info-panel {
+  margin-bottom: 1.25rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid rgb(255 244 217 / 30%);
+  background: linear-gradient(135deg, rgb(61 54 42 / 94%), rgb(31 29 25 / 94%));
+  box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 25%);
+}
+
+.info-panel h2 {
+  margin-bottom: 0.65rem;
+  color: #ffcf7a;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.info-panel p {
+  margin-bottom: 0;
+  color: #e1d7c1;
+  font-family: "JH_FALLOUT", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.server-address {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border: 1px dashed rgb(255 182 65 / 70%);
+  background: rgb(20 19 16 / 55%);
+  color: #ffcf7a;
+  font-family: "TT0807M", sans-serif;
+  font-size: clamp(1.15rem, 3vw, 1.75rem);
+  overflow-wrap: anywhere;
+}
+
+.info-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-actions a {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ffb641;
+  color: #ffcf7a;
+  font-family: "Overseer", sans-serif;
+  font-size: 1.1rem;
+}
+
+.info-actions a:hover {
+  background: rgb(255 182 65 / 14%);
+}
+
+.mechanics-list .faction-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.mechanics-list .faction-details h3 {
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 700px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .site-header {
+    width: min(100% - 2rem, 1200px);
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .faction-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .faction-card {
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 0.85rem;
+  }
+
+  .faction-logo-placeholder {
+    width: 5rem;
+  }
+}
