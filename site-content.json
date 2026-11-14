@@ -38,7 +38,7 @@
       "name": "Fiends",
       "description": "The Fiends are a group of raiders and criminals who operate in the wasteland. They specialize in kidnapping, mugging, and torture.",
       "image": "factionlogos/fiends.webp",
-      "visible": true
+      "visible": false
     },
     {
       "id": "3e69b747-4f66-41e7-8f9c-55d582fc6792",
