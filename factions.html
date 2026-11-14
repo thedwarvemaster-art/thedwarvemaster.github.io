@@ -9,11 +9,11 @@
 </head>
 <body class="factions-page">
   <header class="site-header">
-    <a class="site-logo" href="index.html" aria-label="GFallout home">
+    <a class="site-logo" href="home.html" aria-label="GFallout home">
       <img src="logo.png" alt="GFallout">
     </a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
+      <a href="home.html">Home</a>
       <a href="server.html">Server</a>
       <a href="content-pack.html">Content Pack</a>
       <a href="mechanics.html">Mechanics</a>
@@ -33,122 +33,13 @@
       </div>
     </section>
 
-    <section class="faction-group" id="major-factions" aria-labelledby="major-title">
-      <div class="group-heading">
-        <p class="eyebrow">The powers vying for control</p>
-        <h2 id="major-title">Major Factions</h2>
-      </div>
-      <div class="faction-list">
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="New California Republic logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>New California Republic</h3>
-            <p>Faction description placeholder. Add an overview of the Republic, its goals, and its presence in the Mojave.</p>
-          </div>
-        </article>
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="Caesar's Legion logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>Caesar's Legion</h3>
-            <p>Faction description placeholder. Add an overview of the Legion, its ideals, and its influence across the region.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="faction-group" id="minor-factions" aria-labelledby="minor-title">
-      <div class="group-heading">
-        <p class="eyebrow">Other forces in the Mojave</p>
-        <h2 id="minor-title">Minor Factions</h2>
-      </div>
-      <div class="faction-list">
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="Brotherhood of Steel logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>Brotherhood of Steel</h3>
-            <p>Faction description placeholder. Add an overview of the Brotherhood, its technology, and its role in the Mojave.</p>
-          </div>
-        </article>
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="The Unity logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>The Unity</h3>
-            <p>Faction description placeholder. Add an overview of The Unity and its place in the wasteland.</p>
-          </div>
-        </article>
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="Fiends logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>Fiends</h3>
-            <p>Faction description placeholder. Add an overview of the Fiends and their territory in the Mojave.</p>
-          </div>
-        </article>
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="Great Khans logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>Great Khans</h3>
-            <p>Faction description placeholder. Add an overview of the Great Khans, their history, and their goals.</p>
-          </div>
-        </article>
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="Desert Rangers logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>Desert Rangers</h3>
-            <p>Faction description placeholder. Add an overview of the Desert Rangers and their presence in the region.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="faction-group" id="merchant-factions" aria-labelledby="merchant-title">
-      <div class="group-heading">
-        <p class="eyebrow">Trade, supplies, and survival</p>
-        <h2 id="merchant-title">Merchant Factions</h2>
-      </div>
-      <div class="faction-list">
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="Van Graffs logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>Van Graffs</h3>
-            <p>Faction description placeholder. Add an overview of the Van Graffs and their business in the Mojave.</p>
-          </div>
-        </article>
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="Followers of the Apocalypse logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>Followers of the Apocalypse</h3>
-            <p>Faction description placeholder. Add an overview of the Followers and the aid they provide to wasteland communities.</p>
-          </div>
-        </article>
-        <article class="faction-card">
-          <div class="faction-logo-placeholder" role="img" aria-label="Gun Runners logo placeholder">
-            Logo
-          </div>
-          <div class="faction-details">
-            <h3>Gun Runners</h3>
-            <p>Faction description placeholder. Add an overview of the Gun Runners and their trade in weapons and supplies.</p>
-          </div>
-        </article>
-      </div>
-    </section>
+<div class="admin-bar"><button type="button" id="manage-button">Manage content</button></div>
+<p id="content-status" role="status">Loading content…</p><div id="content-groups"></div>
+<dialog id="admin-dialog"><div class="dialog-heading"><div><p class="eyebrow">Administration</p><h2>Manage content</h2></div><button type="button" id="close-admin" aria-label="Close">×</button></div>
+<p>Save changes to the GitHub repository that publishes this site. GitHub Pages may take a few minutes to update.</p>
+<form id="login-form"><label>Repository owner <input name="owner" required autocomplete="off"></label><label>Repository name <input name="repo" required autocomplete="off"></label><label>Publishing branch <input name="branch" value="main" required></label><label>Content file path <input name="path" value="site-content.json" required></label><label>GitHub token <input name="token" type="password" required autocomplete="off"></label><p class="form-help">Use a fine-grained token with read and write access to Contents for this repository. The token stays in this tab’s memory and is cleared when you sign out or close the page.</p><button>Connect</button></form>
+<div id="editor" hidden><div class="editor-actions"><button type="button" id="new-item">Add new</button><button type="button" id="logout">Sign out</button></div><div id="admin-list"></div>
+<form id="item-form" hidden><h3 id="form-title">Add new</h3><label>Name <input name="name" maxlength="100" required></label><label id="category-label">Category <select name="category"><option value="major">Major</option><option value="minor">Minor</option><option value="merchant">Merchant</option></select></label><label>Description <textarea name="description" maxlength="2000" rows="5" required></textarea></label><label id="image-label">Faction logo <input name="image" type="file" accept="image/png,image/jpeg,image/webp"></label><p id="image-help" class="form-help">Images are automatically center-cropped to a square. Leave empty to keep the current logo.</p><img id="logo-preview" class="logo-preview" alt="Logo preview" hidden><label class="check-label"><input name="visible" type="checkbox" checked> Visible to visitors</label><div class="editor-actions"><button type="submit">Save changes</button><button type="button" id="cancel-edit">Cancel</button></div></form></div><p id="admin-status" role="status"></p></dialog><script src="content.js" defer></script>
   </main>
 
   <footer class="site-footer">
@@ -156,3 +47,4 @@
   </footer>
 </body>
 </html>
+

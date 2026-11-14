@@ -1,0 +1,122 @@
+{
+  "factions": [
+    {
+      "id": "412a2a56-a99f-4dcb-b8d1-79a04e9be078",
+      "category": "major",
+      "name": "New California Republic",
+      "description": "The New California Republic is a democratic nation based on old world values and principles. They specialize in long range combat and have multiple divisions.",
+      "image": "factionlogos/ncr.jpg",
+      "visible": true
+    },
+    {
+      "id": "3496c601-6eac-472d-9113-ecc926ab6c5f",
+      "category": "major",
+      "name": "Caesar's Legion",
+      "description": "Caesar's Legion is a militaristic faction that follows the ideology of Caesar and seeks to conquer the wasteland through force. They specialize in melee combat and have multiple divisions.",
+      "image": "factionlogos/legion.jpeg",
+      "visible": true
+    },
+    {
+      "id": "b38ce377-2746-406b-b906-747c31eea973",
+      "category": "minor",
+      "name": "Brotherhood of Steel",
+      "description": "The Brotherhood of Steel is a technologically advanced faction known for their use of Power Armor and their commitment to preserving pre-war technology. They specialize in Energy Weapons and Power Armor.",
+      "image": "factionlogos/bos.png",
+      "visible": true
+    },
+    {
+      "id": "264b68b4-e6eb-49b7-8c29-b3924a078724",
+      "category": "minor",
+      "name": "The Unity",
+      "description": "The Unity was born from the ashes of Jacobstown and seeks to Unite the wasteland through Mutification once again. They specialize in Super Mutants.",
+      "image": "factionlogos/unity.webp",
+      "visible": true
+    },
+    {
+      "id": "ab60f9ad-d419-4840-a47e-5cf4c20b2d44",
+      "category": "minor",
+      "name": "Fiends",
+      "description": "The Fiends are a group of raiders and criminals who operate in the wasteland. They specialize in kidnapping, mugging, and torture.",
+      "image": "factionlogos/fiends.webp",
+      "visible": true
+    },
+    {
+      "id": "3e69b747-4f66-41e7-8f9c-55d582fc6792",
+      "category": "minor",
+      "name": "Great Khans",
+      "description": "The Great Khans are a group of raiders that have been forced to operate deep in the mountains. They specialize in hit and run tactics and can make chems.",
+      "image": "factionlogos/gk.webp",
+      "visible": true
+    },
+    {
+      "id": "d9cb7617-3ae1-4a9f-8c99-77a6d864aefd",
+      "category": "minor",
+      "name": "Desert Rangers",
+      "description": "The Desert Rangers are a group of veterans and survivalists who have broken off from the NCR. They specialize in Cowboy weapons and dish out Wasteland Justice.",
+      "image": "factionlogos/dr.webp",
+      "visible": true
+    },
+    {
+      "id": "5a179884-0ed5-4d73-91a5-1b66a2f085a2",
+      "category": "merchant",
+      "name": "Van Graffs",
+      "description": "The Van Graffs specialize in trading Energy Weapons throughout the wasteland.",
+      "image": "factionlogos/vg.webp",
+      "visible": true
+    },
+    {
+      "id": "9ff86707-f760-4ebe-a00f-025919415195",
+      "category": "merchant",
+      "name": "Followers of the Apocalypse",
+      "description": "The Followers of the Apocalypse are a group dedicated towards healing the wasteland. They specialize in healing chems and Implants. They can also cure any ails.",
+      "image": "factionlogos/foa.webp",
+      "visible": true
+    },
+    {
+      "id": "4b330d7a-0da0-43ac-8c61-b44ba8c724c6",
+      "category": "merchant",
+      "name": "Gun Runners",
+      "description": "The Gun Runners specialize in Ballistic Weapon crafting and Ammo making.",
+      "image": "factionlogos/gr.webp",
+      "visible": true
+    }
+  ],
+  "mechanics": [
+    {
+      "id": "f6fa1e8e-a0f8-4855-89d0-1a163652f80f",
+      "name": "Character Creation",
+      "description": "Characters have a plethora of options when creating a character. Make a human, a ghoul, or a super mutant. Choose between Nightkin or Green. Supporters get access to wasteland Creatures, like the Deathclaw or Yao Gui.",
+      "visible": true
+    },
+    {
+      "id": "deb48104-57d3-4230-97e3-e40c003023f8",
+      "name": "Leveling and Perks",
+      "description": "You can level up your character to level 40 and choose your SPECIAL, Skills, and Perks to create unique builds. Crafting, Scavenging, Combat, and more.",
+      "visible": true
+    },
+    {
+      "id": "80af3d20-e39b-4cc0-aaa9-2e48ecf5aaa5",
+      "name": "Deep Ammo and Weapon Crafting",
+      "description": "Almost all weapons and ammo can be crafted at workbenches or reloading stations. These systems force you to repair and keep your stock up in order to fight.",
+      "visible": true
+    },
+    {
+      "id": "c647f36d-f9a5-4470-99d6-98867b8eb9ea",
+      "name": "Combat",
+      "description": "Combat uses updated mechanics for an improved feel. You can find all weapons from Fallout: New Vegas as well as a lot from your favorite mods or older games.",
+      "visible": true
+    },
+    {
+      "id": "c6a1750a-e876-46e2-bff8-11ec37ff0989",
+      "name": "Faction Conflict",
+      "description": "Joining a faction lets you engage in conflicts with other factions, like raids or assaults to capture territory available in the Mojave.",
+      "visible": true
+    },
+    {
+      "id": "dbec6360-4912-4f45-821c-837abe331e6b",
+      "name": "Capture Points",
+      "description": "Control key locations to gain advantages and resources. But factions can assault yours in order to gain control.",
+      "visible": true
+    }
+  ]
+}
